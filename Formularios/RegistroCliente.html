@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Cliente</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="RegistroCliente.css">
+</head>
+<body>
+
+<!-- Formulario -->
+<div class="form-container col-md-6">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4>Nuevo Cliente</h4>
+    <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputNombre">Nombre</label>
+        <input type="text" class="form-control" id="inputNombre" placeholder="Nombre">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputApellido">Apellido</label>
+        <input type="text" class="form-control" id="inputApellido" placeholder="Apellido">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email@example.com">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputCelular">Teléfono</label>
+        <input type="tel" class="form-control" id="inputCelular" placeholder="2245-2343" pattern="[0-7]{8}">
+        <small class="form-text text-muted">Ingrese un número de teléfono válido.</small>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputCelular">Celular</label>
+        <input type="tel" class="form-control" id="inputCelular" placeholder="8835-2324" pattern="[0-9]{4}-[0-9]{4}">
+        <small class="form-text text-muted">Ingrese un número de celular válido.</small>
+      </div>
+    </div>
+    <hr>
+    <button type="submit" class="btn btn-dark">Agregar Cliente</button>
+  </form>
+</div>
+</div>
+
+</body>
+</html>
+
+
