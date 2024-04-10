@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Equipos - Bmedia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #111; 
+            color: #fff; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #ffd700; /* Dorado */
+            color: #000; /* Negro */
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #222; 
+            border-radius: 10px; 
+            box-shadow: 0px 0px 20px 0px rgba(255, 215, 0, 0.5); 
+            margin-top: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        table {
+            width: calc(100% - 40px); /* Restar el doble del padding del contenedor */
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #444; 
+            text-align: left;
+            padding: 10px;
+            color: #fff; /* Blanco */
+        }
+
+        th {
+            background-color: #ffd700; 
+            color: #333; 
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #333; /* Cambio de color */
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333; 
+            color: #fff; 
+            border: 1px solid #fff; 
+            border-radius: 5px; 
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s; 
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #555; 
+            color: #ffd700; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inventario de Equipos - Bmedia</h1>
+    </header>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Cantidad en Stock</th>
+                    <th>Estado</th>
+                    <th>Fecha de Adquisición</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Laptop HP</td>
+                    <td>Laptop HP ProBook 450 G6</td>
+                    <td>5</td>
+                    <td><span class="dot green"></span> Disponible</td>
+                    <td>2023-03-15</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Monitor LG</td>
+                    <td>Monitor LG UltraGear 27GL850-B</td>
+                    <td>3</td>
+                    <td><span class="dot green"></span> Disponible</td>
+                    <td>2023-04-10</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Teclado Logitech</td>
+                    <td>Teclado mecánico Logitech G Pro X</td>
+                    <td>10</td>
+                    <td><span class="dot green"></span> Disponible</td>
+                    <td>2023-02-28</td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>Ratón Razer</td>
+                    <td>Ratón inalámbrico Razer DeathAdder V2 Pro</td>
+                    <td>7</td>
+                    <td><span class="dot red"></span> No Disponible</td>
+                    <td>2023-05-20</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="buttons">
+        <button id="btnNuevoEquipo"><i class="fas fa-plus"></i> Registrar Nuevo Equipo</button>
+        <button id="btnActualizarEquipo"><i class="fas fa-sync-alt"></i> Actualizar Equipo</button>
+    </div>
+</body>
+</html>

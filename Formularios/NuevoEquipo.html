@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Equipos - Bmedia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #111; 
+            color: #fff; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #222; 
+            border-radius: 10px; 
+            box-shadow: 0px 0px 20px 0px rgba(255, 215, 0, 0.5); 
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffd700; /* Dorado */
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea,
+        .form-group select,
+        .form-group input[type="date"],
+        .form-group input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #fff; /* Blanco */
+            background-color: #333; 
+            color: #fff; 
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #333; 
+            color: #fff; 
+            border: 1px solid #fff; /* Blanco */
+            border-radius: 5px; 
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s; 
+            margin-right: 10px;
+        }
+
+        .button-container button:hover {
+            background-color: #555; 
+            color: #ffd700; /* Dorado */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for="idInput">ID:</label>
+            <input type="text" id="idInput">
+        </div>
+        <div class="form-group">
+            <label for="nombreInput">Nombre:</label>
+            <input type="text" id="nombreInput">
+        </div>
+        <div class="form-group">
+            <label for="descripcionInput">Descripción:</label>
+            <textarea id="descripcionInput"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="stockInput">Cantidad en Stock:</label>
+            <input type="number" id="stockInput" min="0">
+        </div>
+        <div class="form-group">
+            <label for="estadoInput">Estado:</label>
+            <select id="estadoInput">
+                <option value="Disponible">Disponible</option>
+                <option value="No Disponible">No Disponible</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="fechaInput">Fecha de Adquisición:</label>
+            <input type="date" id="fechaInput">
+        </div>
+        <div class="button-container">
+            <button onclick="guardarEquipo()">Guardar</button>
+            <button onclick="cancelar()">Cancelar</button>
+        </div>
+    </div>
+
+    <script>
+        // Función para guardar el equipo
+        function guardarEquipo() {
+            // Implementar la lógica para guardar el equipo
+            // Por ahora, solo mostramos un mensaje
+            alert('Equipo guardado');
+        }
+
+        // Función para cancelar la operación
+        function cancelar() {
+            // Implementar la lógica para cancelar
+            // Por ahora, solo recargamos la página
+            location.reload();
+        }
+    </script>
+</body>
+</html>

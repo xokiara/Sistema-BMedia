@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Factura</title>
+    <style>
+        body {
+            background-color: #3b3b3b;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+        }
+
+        .header {
+            text-align: center;
+            color: #fff;
+            font-family: "Arial Black", sans-serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .company-info h2 {
+            color: #ffd700; /* Color dorado */
+        }
+
+        .invoice-details p strong {
+            color: #ffd700; /* Color dorado */
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .table th,
+        .table td {
+            border: 1px solid #444;
+            text-align: left;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .table th {
+            background-color: #ffd700;
+            color: #333;
+        }
+
+        .total {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .button-container button,
+        #searchButton,
+        #addButton {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button-container button:hover,
+        #searchButton:hover,
+        #addButton:hover {
+            background-color: #555;
+            color: #ffd700;
+        }
+
+        #searchId {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #fff;
+            width: 180px; /* Ajustar el ancho según sea necesario */
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Factura Bmedia</h1>
+        </div>
+        <div class="company-info">
+            <h2>Datos de la Empresa</h2>
+            <p>Nombre: Bmedia</p>
+            <p>Dirección: Calle Principal, Ciudad ABC</p>
+            <p>Teléfono: 123-456-7890</p>
+        </div>
+        <div class="invoice-details">
+            <p><strong>Número de Factura:</strong> 2024001</p>
+            <p><strong>Fecha:</strong> <span id="fecha"></span></p>
+            <p>
+                <label for="searchId">Buscar ID de Servicio:</label>
+                <input type="text" id="searchId" placeholder="ID de Servicio">
+                <button id="searchButton" onclick="buscarServicio()">Buscar</button>
+                <button id="addButton" onclick="agregarServicio()">Agregar</button>
+            </p>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID Servicio</th>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SV001</td>
+                    <td>Servicio de Video Proyección</td>
+                    <td>2 </td>
+                    <td>$150.00</td>
+                    <td>$300.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total">
+            <h3>Subtotal: L 300.00</h3>
+            <h3>Impuesto (15%): L 45.00</h3>
+            <h3>Total: L 345.00</h3>
+        </div>
+        <div class="footer">
+            <p>Gracias por su preferencia</p>
+            <div class="button-container">
+                <button onclick="regresarMenu()">Regresar al Menú Principal</button>
+                <button onclick="guardarFactura()">Guardar Factura</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function guardarFactura() {
+            // Aquí puedes agregar el código para guardar la factura
+            alert('Factura guardada');
+        }
+
+        function regresarMenu() {
+            // Aquí puedes agregar el código para regresar al menú principal
+            alert('Regresando al Menú Principal');
+        }
+
+        function buscarServicio() {
+            var idServicio = document.getElementById('searchId').value;
+            // Aquí puedes agregar el código para buscar el ID del servicio en la factura
+            alert('Buscando servicio con ID: ' + idServicio);
+        }
+
+        function agregarServicio() {
+            var idServicio = document.getElementById('searchId').value;
+            // Aquí puedes agregar el código para agregar el servicio a la factura
+            alert('Agregando servicio con ID: ' + idServicio + ' a la factura');
+        }
+
+        // Mostrar la fecha actual
+        document.getElementById('fecha').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
