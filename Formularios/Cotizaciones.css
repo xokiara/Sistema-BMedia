@@ -1,0 +1,183 @@
+body {
+            
+    background-color: #3b3b3b; 
+    color: #fff; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    position: relative;
+    width: 100%; /* Ajustamos el ancho del contenedor */
+    max-width: 1000px; /* Establecemos un ancho máximo */
+    margin: 0 auto; /* Centramos horizontalmente */
+    padding: 20px;
+    background-color: #222; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
+  }
+  
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    height: auto;
+  }
+  
+  .header {
+    text-align: center;
+    color: #fff; 
+    font-family: "Arial Black", sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  #fecha {
+    color: darkgoldenrod ;
+  }
+  label[for="fecha"] {
+    
+    color: #ffd700; /* Color dorado */
+  }
+  h2 {
+    color: #ffd700;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #444; 
+    text-align: left;
+    padding: 10px;
+    
+  }
+  a {
+    color:#ffd700; 
+  }
+  
+  th {
+    background-color: #ffd700; 
+    color: #333; 
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #333; 
+    color: #fff; 
+    border: 1px solid #fff; 
+    border-radius: 5px; 
+  
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+  }
+  
+  button:hover {
+    background-color: #555; 
+    color: #ffd700; 
+  }
+  textarea {
+    padding: 10px;
+    border-radius: 5px; 
+    border: 1px solid #444; 
+    margin-bottom: 10px;
+    width: calc(100% - 22px); 
+    background-color: #333; 
+    color: #fff; 
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] 
+  
+  {
+    padding: 10px;
+    border-radius: 5px; 
+    border: 1px solid #444; 
+    margin-bottom: 10px;
+    width: calc(100% - 22px); 
+    background-color: #333; 
+    color: #fff; 
+  }
+  
+  .add-service-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .add-service-button img {
+    margin-right: 5px;
+  }
+  
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .button-row button {
+    flex: 1;
+    margin: 0 5px;
+    max-width: 150px; /* Ancho máximo para los botones */
+  }   
+  @media (max-width: 480px) {
+    .button-row button {
+        max-width: 100%; /* El ancho máximo ocupa el 100% del contenedor */
+    }
+  }
+  
+  /* Estilos para los campos del formulario */
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye los elementos de forma equitativa */
+  }
+  
+  .form-group {
+    flex-basis: calc(50% - 5px); /* Calcula el ancho de cada campo */
+    margin-bottom: 10px;
+  }
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    margin-bottom: 10px;
+    width: calc(100% - 22px);
+    background-color: #333;
+    color: #fff;
+    appearance: none;
+   
+  }
+  
+  /* Ajustes para la distribución en dos columnas */
+  @media (max-width: 767px) {
+    .form-group {
+        flex-basis: calc(100% - 5px); /* Ancho completo en dispositivos pequeños */
+    }
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye los elementos de forma equitativa */
+  }
+  
+  .form-group {
+    flex-basis: calc(50% - 5px); /* Calcula el ancho de cada campo */
+    margin-bottom: 10px;
+  }
+  
+  /* Ajustes para la distribución en dos columnas */
+  @media (max-width: 767px) {
+    .form-group {
+        flex-basis: calc(100% - 5px); /* Ancho completo en dispositivos pequeños */
+    }
+  }
+

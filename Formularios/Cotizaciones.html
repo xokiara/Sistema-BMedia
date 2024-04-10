@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Cotizaciones</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="Cotizaciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div  class="container" id="Cotizaciones" >
+        <img class="logo" src="../Imagenes/logo_bm.png" alt="Logo de la empresa">
+        <h1 class="header">Cotizaciones</h1>
+
+         <a href="Home.html">Home</a>
+        <h2>Buscar Cotización</h2>
+        <input type="text" id="busquedaInput" placeholder="Buscar por nombre del cliente...">
+        <button>Buscar</button>
+        
+        <h2>Información del Cliente</h2>
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" id="nombreInput" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <input type="text" id="apellidoInput" placeholder="Apellido">
+            </div>
+            <div class="form-group">
+                <input type="email" id="emailInput" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="tel" id="telInput" placeholder="Teléfono">
+            </div>
+            <div class="form-group">
+                <input type="tel" id="celInput" placeholder="Celular" >
+            
+            </div>
+        </div>
+        <h2>Detalles del evento o servicio</h2>
+        <div class="form-row">
+            <div class="form-group">
+                <textarea id="descripcion" name="descripcion" placeholder="Detalle el evento o servicio" rows="4" cols="50" required></textarea><br>
+            </div>
+            <div class="form-group">
+                <textarea id="especificaciones" name="especificaciones" placeholder="Especificaciones técnicas" rows="4" cols="50" required></textarea><br>
+            </div>
+            
+                <textarea id="Recursos" name="recursos" placeholder="Recursos Necesarios" rows="4" cols="50" required></textarea><br>
+
+            <div class="form-group">
+                <label for="fecha">Fecha del Evento / Plazo de Entrega:</label>
+      <input type="datetime-local" id="fecha" name="fecha" required><br>
+            </div>
+        </div>
+
+        <h2>Costos y tarifas</h2>
+        <div class="form-group">
+            <input type="text" id="tarifa" placeholder="Costo estimado">
+        </div>
+        <div class="form-group">
+            <textarea name="adicional" placeholder="Costo adicional" rows="4" cols="50" required></textarea><br>
+        </div>
+
+        <h2>Términos y condiciones</h2>
+        <div class="form-group">
+            <textarea name="pago" placeholder="Politica de Pago" rows="4" cols="50" required></textarea><br>
+        </div>
+        <div class="form-group">
+            <textarea name="cancelacion" placeholder="Politica de cancelación y reprogramación" rows="4" cols="50" required></textarea><br>
+        </div>
+
+        
+        <div class="button-row">
+            <button id="btnGenerarPDF" type="button" class="btn btn-primary btn-lg">Generar PDF</button>
+            <button type="button" class="btn btn-primary btn-lg" >Guardar Cotización</button>
+            <button type="button" class="btn btn-primary btn-lg" >Cancelar</button>
+        </div>
+    </div>
+
+    <script>
+        // Función para generar el PDF
+        function generarPDF() {
+          const pdf = new jsPDF();
+    
+          // Obtener el HTML del formulario
+          const formularioHTML = document.getElementById('Cotizaciones').innerHTML;
+    
+          // Generar el PDF a partir del HTML del formulario
+          pdf.text(20, 20, 'Formulario de Cotización');
+          pdf.fromHTML(formularioHTML, 20, 30, { 'width': 170 });
+    
+          // Descargar el PDF
+          pdf.save('cotizacion.pdf');
+        }
+    
+        // Asociar la función generarPDF al evento click del botón
+        document.getElementById('btnGenerarPDF').addEventListener('click', generarPDF);
+      </script>
+</body>
+</html>
