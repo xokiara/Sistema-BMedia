@@ -12,11 +12,14 @@
 <body>
     <!-- =============== Navigation ================ -->
     <div class="container">
-        <div class="navigation">
+        <div class="navigation" >
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
             <ul>
                 <li>
                     <a href="#">
-                        <span id="BmediaTitulo"class="title">B Media</span>
+                        <img src="../Imagenes/logo_bm.png" alt="Logo de B Media">
                     </a>
                 </li>
 
@@ -30,7 +33,7 @@
                 </li>
 
                 <li>
-                    <a href="ListaClientes.html">
+                    <a href="RegistroCliente.html">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -55,7 +58,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="RegistroEmpleado.html">
                         <span class="icon">
                             <ion-icon name="person-outline"></ion-icon>
                         </span>
@@ -118,10 +121,6 @@
         <!-- ========================= Main ==================== -->
         <div class="main">
             <div class="topbar">
-                <div class="toggle">
-                    <ion-icon name="menu-outline"></ion-icon>
-                </div>
-
                 <div class="search">
                     <label>
                         <input type="text" placeholder="Buscar Aquí">
@@ -133,16 +132,17 @@
                     <ion-icon name="person-circle-outline"></ion-icon>
                 </div>
             </div>
-
         </div>
+    </div>
 
+    <!-- =========== Scripts =========  -->
+    <!-- Antes de cerrar la etiqueta body -->
+    <script src="Home.js"></script>
 
-        <!-- =========== Scripts =========  -->
-        <script src="Home.js"></script>
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-        <!-- ====== ionicons ======= -->
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
 </body>
-
 </html>
