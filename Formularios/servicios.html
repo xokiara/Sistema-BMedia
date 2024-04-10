@@ -24,7 +24,7 @@
             padding: 20px;
             background-color: #222; 
             border-radius: 10px; 
-            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
+            box-shadow: 0px 0px 20px 0px rgba(255, 215, 0, 0.5); 
         }
 
         .logo {
@@ -109,11 +109,35 @@
             flex: 1;
             margin: 0 5px;
         }
+
+        /* Estilos para los botone */
+        .navigation-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button, .menu-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .back-button:hover, .menu-button:hover {
+            background-color: #555; 
+            color: #ffd700; 
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <img class="logo" src="C:\Users\AlexisG\Desktop\Analis Bmedia\assets\images\logo_bm.png" alt="Logo de la empresa">
+        <img class="logo" src="Imagenes/logo_bm.png" alt="Logo de la empresa">
         <h1 class="header">Servicios</h1>
 
         <h2>Buscar Servicios</h2>
@@ -125,7 +149,7 @@
         <input type="text" id="nombreInput" placeholder="Nombre">
         <input type="text" id="precioInput" placeholder="Precio">
         <div class="add-service-button">
-            <img src="C:\Users\AlexisG\Desktop\Analis Bmedia\assets\imagesplus_logo.png" alt="Añadir servicio">
+            <img src="/assets/" alt="">
             <button onclick="agregarServicio()">Añadir Servicio</button>
         </div>
 
@@ -147,6 +171,11 @@
         <div class="button-row">
             <button onclick="guardarCambios()">Guardar Cambios</button>
             <button onclick="cancelar()">Cancelar</button>
+        </div>
+                <!-- boton de menu y atras-->
+        <div class="navigation-buttons">
+            <button class="back-button">Atrás</button>
+            <button class="menu-button">Menú Principal</button>
         </div>
     </div>
 
@@ -170,9 +199,9 @@
         }
 
         // Los servicios existentes
-        servicios.push({ codigo: "001", nombre: "Limpieza", precio: 50 });
-        servicios.push({ codigo: "002", nombre: "Reparación", precio: 100 });
-        servicios.push({ codigo: "003", nombre: "Instalación", precio: 80 });
+        servicios.push({ codigo: "001", nombre: "Produccion", precio: 5000 });
+        servicios.push({ codigo: "002", nombre: "Diseño", precio: 2000 });
+        servicios.push({ codigo: "003", nombre: "Estrategias y analisis", precio: 8000 });
 
         // Mostrar servicios cuando se carga
         mostrarServicios(servicios);
