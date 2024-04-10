@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios BMedia</title>
+    <style>
+        body {
+            background-color: #111; 
+            color: #fff; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #222; 
+            border-radius: 10px; 
+            box-shadow: 0px 0px 20px 0px rgba(255, 215, 0, 0.5); 
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 80px;
+            height: auto;
+        }
+
+        .header {
+            text-align: center;
+            color: #fff; 
+            font-family: "Arial Black", sans-serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #ffd700;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #444; 
+            text-align: left;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #ffd700; 
+            color: #333; 
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333; 
+            color: #fff; 
+            border: 1px solid #fff; 
+            border-radius: 5px; 
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s; 
+        }
+
+        button:hover {
+            background-color: #555; 
+            color: #ffd700; 
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 5px; 
+            border: 1px solid #444; 
+            margin-bottom: 10px;
+            width: calc(100% - 22px); 
+            background-color: #333; 
+            color: #fff; 
+        }
+
+        .add-service-button {
+            display: flex;
+            align-items: center;
+        }
+
+        .add-service-button img {
+            margin-right: 5px;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .button-row button {
+            flex: 1;
+            margin: 0 5px;
+        }
+
+        /* Estilos para los botone */
+        .navigation-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button, .menu-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .back-button:hover, .menu-button:hover {
+            background-color: #555; 
+            color: #ffd700; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="assets/images/logo_bm.png" alt="Logo de la empresa">
+        <h1 class="header">Servicios</h1>
+
+        <h2>Buscar Servicios</h2>
+        <input type="text" id="busquedaInput" placeholder="Buscar por nombre...">
+        <button onclick="buscarServicio()">Buscar</button>
+
+        <h2>Añadir Servicio</h2>
+        <input type="text" id="codigoInput" placeholder="Código">
+        <input type="text" id="nombreInput" placeholder="Nombre">
+        <input type="text" id="precioInput" placeholder="Precio">
+        <div class="add-service-button">
+            <img src="/assets/" alt="">
+            <button onclick="agregarServicio()">Añadir Servicio</button>
+        </div>
+
+        <h2>Lista de Servicios</h2>
+        <table id="tablaServicios">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+                <!-- Aquí se insertanlos los servicios -->
+            </tbody>
+        </table>
+
+        <div class="button-row">
+            <button onclick="guardarCambios()">Guardar Cambios</button>
+            <button onclick="cancelar()">Cancelar</button>
+        </div>
+                <!-- boton de menu y atras-->
+        <div class="navigation-buttons">
+            <button class="back-button">Atrás</button>
+            <button class="menu-button">Menú Principal</button>
+        </div>
+    </div>
+
+    <script>
+        let servicios = [];
+
+        function buscarServicio() {
+            // Implementa la búsqueda de servicios
+        }
+
+        function agregarServicio() {
+            // Implementa agregar servicios
+        }
+
+        function guardarCambios() {
+            // Implementa para guardar los cambios
+        }
+
+        function cancelar() {
+            // Implementa para cancelar los cambios
+        }
+
+        // Los servicios existentes
+        servicios.push({ codigo: "001", nombre: "Produccion", precio: 5000 });
+        servicios.push({ codigo: "002", nombre: "Diseño", precio: 2000 });
+        servicios.push({ codigo: "003", nombre: "Estrategias y analisis", precio: 8000 });
+
+        // Mostrar servicios cuando se carga
+        mostrarServicios(servicios);
+
+        function mostrarServicios(serviciosMostrar) {
+            const cuerpoTabla = document.getElementById("cuerpoTabla");
+            cuerpoTabla.innerHTML = "";
+            serviciosMostrar.forEach(servicio => {
+                const fila = document.createElement("tr");
+                fila.innerHTML = `
+                    <td>${servicio.codigo}</td>
+                    <td>${servicio.nombre}</td>
+                    <td>${servicio.precio}</td>
+                    <td><button onclick="editarServicio('${servicio.codigo}')">Editar</button>
+                        <button onclick="borrarServicio('${servicio.codigo}')">Borrar</button></td>
+                `;
+                cuerpoTabla.appendChild(fila);
+            });
+        }
+    </script>
+</body>
+</html>

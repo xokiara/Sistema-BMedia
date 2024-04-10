@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronograma BMedia</title>
+  <style>
+    body {
+      background-color: #111; 
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative; 
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    form {
+      border: 1px solid yellow;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      margin-bottom: 20px;
+      background-color: #222; 
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="time"],
+    select {
+      width: calc(50% - 5px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #444; 
+      color: white;
+    }
+    .create-button, .edit-button, .delete-button, .back-button, .menu-button {
+      padding: 15px 20px; 
+      background-color: #333; 
+      color: white;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s; 
+      margin-left: 10px;
+      width: auto; 
+    }
+    .create-button:hover, .edit-button:hover, .delete-button:hover, .back-button:hover, .menu-button:hover {
+      background-color: #555; 
+      color: #ffd700; 
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #555;
+      color: white;
+    }
+    
+    .logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px; 
+      height: auto; 
+    }
+    /* botones de navegacioj */
+    .navigation-buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="assets/images/logo_bm.png" alt="Logo de la empresa" class="logo"> 
+
+    <h1>Cronograma</h1>
+    <form>
+      <h2 style="color: yellow;">Crear un Evento</h2> 
+      <label for="nombre_evento">Nombre del Evento:</label>
+      <input type="text" id="nombre_evento" name="nombre_evento" placeholder="Ingrese el nombre del evento">
+
+      <label for="ciudad">Ciudad:</label>
+      <input type="text" id="ciudad" name="ciudad" placeholder="Ingrese la ciudad">
+
+      <label for="departamento">Departamento:</label>
+      <input type="text" id="departamento" name="departamento" placeholder="Ingrese el departamento">
+
+      <label for="pais">País:</label>
+      <input type="text" id="pais" name="pais" placeholder="Ingrese el país">
+
+      <label for="fotografo">Fotografo:</label>
+      <select id="fotografo" name="fotografo">
+        <option value="fotografo1">Fotógrafo 1</option>
+        <option value="fotografo2">Fotógrafo 2</option>
+        
+      </select>
+
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha">
+
+      <label for="hora">Hora:</label>
+      <input type="time" id="hora" name="hora">
+
+      <input type="submit" class="create-button" value="Crear Evento">
+    </form>
+
+    <h2 style="color: yellow;">Eventos Programados</h2> 
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre del Evento</th>
+          <th>Ciudad</th>
+          <th>Fotógrafo</th>
+          <th>Fecha y Hora</th>
+          <th>Acciones</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Evento 1</td>
+          <td>Tegucigalpa</td>
+          <td>Fotógrafo 1</td>
+          <td>2024-04-10 14:00</td>
+          <td>
+            <button class="edit-button">Editar</button>
+            <button class="delete-button">Eliminar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Evento 2</td>
+          <td>San Pedro Sula</td>
+          <td>Fotógrafo 2</td>
+          <td>2024-05-11 15:00</td>
+          <td>
+            <button class="edit-button">Editar</button>
+            <button class="delete-button">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="navigation-buttons">
+      <button class="back-button">Atrás</button>
+      <button class="menu-button">Menú Principal</button>
+    </div>
+  </div>
+</body>
+</html>
