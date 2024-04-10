@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Contable Bmedia</title>
+    
+    <style>
+        body 
+        {
+            background-color: #111; 
+            color:  #fff; 
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #222; 
+            border-radius: 10px; 
+            box-shadow: 0px 0px 20px 0px rgba(255, 215, 0, 0.5); 
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 80px;
+            height: auto;
+        }
+        .header {
+            text-align: center;
+            color: #fff; 
+            font-family: "Arial Black", sans-serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #ffd700;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #444; 
+            text-align: left;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #ffd700; 
+            color: #333; 
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333; 
+            color: #fff; 
+            border: 1px solid #fff; 
+            border-radius: 5px; 
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s; 
+        }
+
+        button:hover {
+            background-color: #555; 
+            color: #ffd700; 
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 5px; 
+            border: 1px solid #444; 
+            margin-bottom: 10px;
+            width: calc(100% - 22px); 
+            background-color: #333; 
+            color: #fff; 
+        }
+        .gradient-button {
+            background: linear-gradient(to right, black, orange);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+   
+    <form>
+        <h2>Activos</h2>
+        Ventas: <input type="text" name="ventas"><br>
+        Cuentas por cobrar: <input type="text" name="cuentasPorCobrar"><br>
+        Inventario: <input type="text" name="inventario"><br>
+        Mobiliario y equipo: <input type="text" name="mobiliarioYEquipo"><br>
+        <h2>Pasivos</h2>
+        Cuentas por pagar: <input type="text" name="cuentasPorPagar"><br>
+        Proveedores: <input type="text" name="proveedores"><br>
+        Impuesto S/V por pagar: <input type="text" name="impuestoSV"><br>
+        <button class="gradient-button">Registrar</button>
+    </form>
+</body>
+</html>
