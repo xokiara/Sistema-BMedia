@@ -7,14 +7,14 @@
     
     <style>
        body {
-  background-color: #3b3b3b; 
+        background-color: #3b3b3b; 
   color: #fff; 
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .header {
-  text-align: left;
+  text-align: center;
   color: #fff; 
   font-family: "Arial Black", sans-serif;
   font-size: 32px;
@@ -57,7 +57,7 @@ table {
 
 th, td {
   border: 1px solid #444; 
-  text-align: left;
+  text-align: center;
   padding: 10px;
 }
 
@@ -170,7 +170,9 @@ select {
     </style>
 </head>
 <body>
-   
+    <div class="container">
+        <img class="logo" src="../Imagenes/logo_bm.png" alt="Logo de la empresa">
+        <h1 class="header">Registro Contables</h1>
     <form>
         <h2>Activos</h2>
         Ventas: <input type="text" name="ventas" placeholder="Ventas"><br>
